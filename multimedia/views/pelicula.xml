@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <odoo>
+        <data>
+
+            <act_window id="action_pelicula_task" name="Multimedia"
+                res_model="pelicula.task" view_mode="tree,form"/>
+
+            <record id="view_form_pelicula_task" model="ir.ui.view">
+                <field name="name">pelicula  Form</field>
+                <field name="model">pelicula.task</field>
+                <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="name2"/>
+                                <field name="name3"/>
+                                <field name="name4"/>
+                                <field name="name5" widget = 'image'/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+                </field>
+            </record>
+
+            <menuitem name="Multimedia" id="menu_multimedia" sequence="10" />
+            <menuitem name="Inicio" id="menu_inicio" parent="menu_multimedia" sequence="10"/>
+            <menuitem name="Pelicula" id="menu_pelicula" action="action_pelicula_task" parent="menu_inicio" sequence="2"/>
+        </data>
+    </odoo>
